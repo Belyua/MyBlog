@@ -8,7 +8,7 @@ CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 
 STATIC_URL = '/static/'
-SECRET_KEY = 'n#n@b@=$=86=ni+3l(y3jp(1d_)(k936h+_u(j_mr&y^lmta46'
+SECRET_KEY = ''
 LOGIN_REDIRECT_URL = "/"
 LOGOUT_REDIRECT_URL = "/login"
 REGISTER_REDIRECT_URL = "/"
@@ -75,11 +75,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'Belyutin7777',
-        'HOST': 'localhost',
-        'PORT': '5432',
+    
     }
 }
 
