@@ -10,12 +10,7 @@ class UserForm(UserCreationForm):
             'placeholder': ('Username')
         }
     ))
-    first_name = forms.CharField(widget=forms.TextInput(
-        attrs={
-            'type': 'first_name',
-            'placeholder': ('First Name')
-        }
-    ))
+
     email = forms.EmailField(widget=forms.TextInput(
         attrs={
             'type': 'email',
@@ -34,16 +29,10 @@ class UserForm(UserCreationForm):
             'placeholder': 'Repeat Password'
         }
     ))
-    group_choices = (
-        ('M', 'Manager'),
-        ('U', 'User'),
-        ('C', 'Customer'),
-    )
-    groups = forms.ChoiceField(choices=group_choices)
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'first_name', 'last_name', 'password1', 'password2', 'groups']
+        fields = ['username', 'email', 'first_name', 'password1', 'password2']
 
 
 class RegisterForm(UserCreationForm):

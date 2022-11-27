@@ -1,15 +1,12 @@
-from .forms import UserForm
-from django.shortcuts import render, redirect
-from django.views import View
-from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import Group
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from django.shortcuts import render
 from django.shortcuts import render, redirect
+from django.contrib.auth.models import Group
+from django.contrib import messages
+from django.views import View
 from .forms import RegisterForm
-from django.contrib import auth
+from .forms import UserForm
 
 
 class LoginView(View):
@@ -25,7 +22,6 @@ class LoginView(View):
                 return redirect('/')
             else:
                 messages.info(request, 'Login attemp failed.')
-                return redirect('registration/login.html')
         return render(request, 'registration/login.html', {'form': form})
 
     def post(self, request):
@@ -52,23 +48,14 @@ class LogoutView(View):
         return redirect('account_login')
 
 
-@method_decorator(login_required(login_url='login/'), name="dispatch")
-class HomeView(View):
-    def get(self, request):
-        if self.request.user.groups.filter(name='M').exists():
-            return render(request, '/')
-        else:
-            messages.info(request, 'You are not authorized to access this page.')
-            return redirect('/')
-
-
-def register(response):
+def register(response,):
     if response.method == "POST":
         form = RegisterForm(response.POST)
         if form.is_valid():
             form.save()
-
-        return redirect("/")
+            messages.success(response, 'Account has been created succesfully')
+        else:
+            messages.error(response, "not valid form, try again")
     else:
         form = RegisterForm()
 
