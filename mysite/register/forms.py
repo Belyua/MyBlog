@@ -32,7 +32,7 @@ class UserForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'first_name', 'password1', 'password2']
+        fields = ['username', 'email', 'password1', 'password2']
 
 
 class RegisterForm(UserCreationForm):
