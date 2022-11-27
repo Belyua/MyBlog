@@ -1,10 +1,7 @@
-{% extends "blog/base.html" %}
-{%load static%}
-{% block title %}Create an Account{% endblock %}
+
 {% load crispy_forms_tags %}
 
 {% block content %}
-<link rel="stylesheet" href="{%static 'static/login/register.css' %}" type="text/css">
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -79,6 +76,7 @@ form h3{
     font-weight: 500;
     line-height: 42px;
     text-align: center;
+    color:black;
 }
 
 label{
@@ -97,12 +95,13 @@ input{
     margin-top: 8px;
     font-size: 14px;
     font-weight: 300;
+    color: black
 }
 ::placeholder{
-    color: #e5e5e5;
+    color: black;
 }
 button{
-    margin-top: 50px;
+    margin-top: 30px;
     width: 100%;
     background-color: #ffffff;
     color: #080710;
@@ -121,16 +120,16 @@ button{
         <div class="shape"></div>
         <div class="shape"></div>
     </div>
-    <form>
-        <h3>Login Here</h3>
+    <form method="POST" class="form-group">
+        <h3>Sign-up</h3>
+	{% csrf_token %}
 
-		<div class="login">
-            <form method="POST" class="form-group">
-            {% csrf_token %}
-            {{form|crispy}}
-            <button type="submit" class="btn btn-success">Register</button>
-            </form>
-		</div>
+        <input type="text" name="username" placeholder="Username" maxlength="150" autofocus="" class="textinput textInput form-control" required="" id="id_username">
+        <input type="email" name="email" placeholder="Email" class="emailinput form-control" required="" id="id_email">
+        <input type="password" name="password1" placeholder="Password" autocomplete="new-password" class="textinput textInput form-control" required="" id="id_password1">
+        <input type="password" name="password2" placeholder="Repeat Password" autocomplete="new-password" class="textinput textInput form-control" required="" id="id_password2">
+	<button type="submit" class="btn btn-success">Register</button>
     </form>
+		</div>
 </body>
 {% endblock %}

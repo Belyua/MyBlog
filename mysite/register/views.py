@@ -28,8 +28,7 @@ class LoginView(View):
                 return redirect('registration/login.html')
         return render(request, 'registration/login.html', {'form': form})
 
-
-    def register(response):
+    def register(response,):
         if response.method == "POST":
             form = RegisterForm(response.POST)
             if form.is_valid():
@@ -37,10 +36,10 @@ class LoginView(View):
                 messages.success(response, "account created succefuly")
                 return redirect("/")
             messages.error(response, "error")
-            return render(response, "register/register.html", {"form": form} )
+            return render(response, "register/register.html", {"form": form})
         else:
-            messages.info(response, "error")
             form = RegisterForm()
+            messages.warning(response, "error")
         return render(response, "register/register.html", {"form": form})
 
 
