@@ -1,15 +1,9 @@
-from .forms import UserForm
-from django.shortcuts import render, redirect
-from django.views import View
-from django.contrib import messages
 from django.contrib.auth import authenticate, login, logout
-from django.contrib.auth.models import Group
-from django.contrib.auth.decorators import login_required
-from django.utils.decorators import method_decorator
-from django.shortcuts import render
 from django.shortcuts import render, redirect
+from django.contrib import messages
 from .forms import RegisterForm
-from django.contrib import auth
+from django.views import View
+from .forms import UserForm
 
 
 class LoginView(View):

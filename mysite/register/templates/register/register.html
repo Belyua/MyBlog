@@ -1,13 +1,11 @@
-
+{% extends 'blog/base.html' %}
 {% load crispy_forms_tags %}
-
 {% block content %}
 <html lang="en">
 <head>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
-
     <style media="screen">
       *,
 *:before,
@@ -78,7 +76,6 @@ form h3{
     text-align: center;
     color:black;
 }
-
 label{
     display: block;
     margin-top: 30px;
@@ -111,8 +108,6 @@ button{
     border-radius: 5px;
     cursor: pointer;
 }
-
-
     </style>
 </head>
 <body>
@@ -123,7 +118,6 @@ button{
     <form method="POST" class="form-group">
         <h3>Sign-up</h3>
 	{% csrf_token %}
-
         <input type="text" name="username" placeholder="Username" maxlength="150" autofocus="" class="textinput textInput form-control" required="" id="id_username">
         <input type="email" name="email" placeholder="Email" class="emailinput form-control" required="" id="id_email">
         <input type="password" name="password1" placeholder="Password" autocomplete="new-password" class="textinput textInput form-control" required="" id="id_password1">

@@ -7,7 +7,6 @@ background-color:DEE2E7;
 	left: 0;
 	visibility: hidden; /*[1]*/
 }
-
 .clicky-menu.no-js li:hover > ul {
 	visibility: visible;
 }
@@ -19,8 +18,6 @@ background-color:DEE2E7;
 .clicky-menu ul[aria-hidden="false"] {
 	visibility: visible;
 }
-
-
 .clicky-menu .sub-menu--right {
 	left: auto !important;
 	right: 0 !important;
@@ -30,7 +27,6 @@ svg[hidden] {
 	display: none;
 	position: absolute;
 }
-
 .site-navigation {
     margin-top: 0px;
 	width: 86%;
@@ -40,7 +36,6 @@ svg[hidden] {
 	background-color: #eee;
 	border-radius: 4px;
 }
-
 .clicky-menu {
 	justify-content: stretch;
 	padding: 0;
@@ -51,7 +46,6 @@ svg[hidden] {
 		display: flex;
 	}
 }
-
 .clicky-menu a,
 .clicky-menu button {
 	margin: .25em;
@@ -74,7 +68,6 @@ svg[hidden] {
 	outline: .125em dotted purple;
 	outline-offset: -.125em;
 }
-
 /* Top Level Items */
 .clicky-menu > li {
 	position: relative;
@@ -83,7 +76,6 @@ svg[hidden] {
 	justify-content: stretch;
 	flex-wrap: wrap;
 }
-
 .clicky-menu > li > a,
 .clicky-menu > li > button {
 	flex: 1 0 auto;
@@ -102,18 +94,15 @@ svg[hidden] {
 	}
 }
 
-/* Icon */
 .clicky-menu svg {
 	width: 1em;
 	height: 1em;
 	margin-left: .5em;
 }
-
 .clicky-menu [aria-expanded="true"] svg {
 	transform: scaleY(-1);
 }
 
-/* Submenu Styles */
 .clicky-menu ul {
 	min-width: 100%;
 	width: 12em;
@@ -128,8 +117,6 @@ svg[hidden] {
 		box-shadow: 2px 4px 4px rgba(0,0,0,.2);
 	}
 }
-
-/* Responsive Submenu Behavior */
 .clicky-menu ul[aria-hidden="false"] {
 	position: static;
 	width: 100%;
@@ -142,8 +129,6 @@ svg[hidden] {
 		width: auto;
 	}
 }
-
-
 body {
 
   background-color: #fff;
@@ -154,10 +139,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-/*=================================================================*/
-/*                      HEADER
-/*=================================================================*/
-
 .header-personal nav.clone, .header-classic .header-bottom.clone {
   position: fixed;
   top: 0;
@@ -176,7 +157,6 @@ body {
 .header-personal nav.clone .centered-nav, .header-classic .header-bottom.clone .centered-nav {
   border-top: 0;
 }
-
 .header-classic .header-top {
   padding-top: 35px;
   padding-bottom: 35px;
@@ -191,7 +171,6 @@ body {
   padding-bottom: 40px;
   border-bottom: solid 1px #EBEBEB;
 }
-
 body.down .header-default.clone, body.down .header-personal nav.clone, body.down .header-classic .header-bottom.clone {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -199,7 +178,6 @@ body.down .header-default.clone, body.down .header-personal nav.clone, body.down
   -o-transform: translateY(0);
   transform: translateY(0);
 }
-
 .header-personal .header-top {
   padding-top: 100px;
   padding-bottom: 30px;
@@ -239,7 +217,6 @@ body.down .header-default.clone, body.down .header-personal nav.clone, body.down
 .header-personal.light .navbar.clone li.active .nav-link {
   color: #FFF;
 }
-
 .text-logo {
   color: #203656;
   font-size: 30px;
@@ -253,13 +230,11 @@ body.down .header-default.clone, body.down .header-personal nav.clone, body.down
   font-size: 44px;
   margin-left: 5px;
 }
-
 .slogan {
   font-family: "Poppins", sans-serif;
   color: #9faabb;
   font-size: 14px;
 }
-
 .navbar {
   padding: 0;
 }
@@ -282,8 +257,6 @@ body.down .header-default.clone, body.down .header-personal nav.clone, body.down
   background: -webkit-linear-gradient(left, #FE4F70 0%, #FFA387 100%);
   background: linear-gradient(to right, #FE4F70 0%, #FFA387 100%);
 }
-
-
 .header-right .social-icons {
   display: inline-block;
 }
@@ -297,17 +270,12 @@ body.down .header-default.clone, body.down .header-personal nav.clone, body.down
 .header-right .header-buttons button:first-child {
   margin-left: 0;
 }
-
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
     padding-right: 1.3rem;
     padding-left: 1.3rem;
   }
 }
-
-/*=================================================================*/
-/*                      SECTIONS
-/*=================================================================*/
 .site-wrapper .main-overlay {
   opacity: 0;
   visibility: hidden;
@@ -325,27 +293,22 @@ body.down .header-default.clone, body.down .header-personal nav.clone, body.down
   opacity: 0.6;
   visibility: visible;
 }
-
 section {
   position: relative;
 }
-
 .main-content {
   margin-top: 60px;
 }
-
 .main-content-lg {
   margin-top: 140px;
   margin-bottom: 140px;
 }
-
 .container-minimal {
   max-width: 900px;
   margin: auto;
   padding-left: 15px;
   padding-right: 15px;
 }
-
 .section-header {
   margin-bottom: 30px;
   position: relative;
